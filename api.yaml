@@ -1,12 +1,13 @@
 openapi: 3.0.0
 info:
-  title: Vulnerability Testing API
+  title: Sample API
   version: 1.0.0
 paths:
   /sql-injection:
     post:
       summary: Test for SQL injection vulnerability
       requestBody:
+        required: true
         content:
           application/json:
             schema:
@@ -16,6 +17,6 @@ paths:
                   type: string
       responses:
         '200':
-          description: Success
+          description: Successful
         '400':
           description: Bad Request
